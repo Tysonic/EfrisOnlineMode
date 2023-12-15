@@ -29,6 +29,6 @@ class Utils{
     }
     public function  sign ($encrypted_string,$pi_key){
         openssl_sign($encrypted_string, $Signature,$pi_key );
-        return $Signature;
+        return base64_encode($Signature);
     }
 }
